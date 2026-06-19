@@ -1,0 +1,163 @@
+/* Basic reset & layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #1a1a2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  background: #16213e;
+  border-radius: 12px;
+  padding: 24px;
+  width: 360px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Input group */
+.input-group,
+.output-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  color: #a0a0b8;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+.expression-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  background: #0f3460;
+  border: 2px solid #1a4a7a;
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.expression-input:focus {
+  border-color: #4a9eff;
+}
+
+.expression-input::placeholder {
+  color: #5a7a9a;
+}
+
+/* Output display */
+.output-display {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1.3rem;
+  background: #0f3460;
+  border: 2px solid #1a4a7a;
+  border-radius: 8px;
+  color: #7fff7f;
+  min-height: 48px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.calc-btn {
+  padding: 16px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #1a4a7a;
+  color: #fff;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.calc-btn:hover {
+  background: #2a6a9a;
+}
+
+.calc-btn:active {
+  transform: scale(0.95);
+  background: #0f3460;
+}
+
+/* Action buttons (AC, backspace) */
+.action-btn {
+  background: #533483;
+}
+
+.action-btn:hover {
+  background: #7344a3;
+}
+
+.action-btn:active {
+  background: #432473;
+}
+
+/* Function buttons (sqrt, sin, cos, tan) */
+.fn-btn {
+  background: #0f3460;
+  font-size: 0.85rem;
+}
+
+.fn-btn:hover {
+  background: #1a4a7a;
+}
+
+/* Operator buttons */
+.op-btn {
+  background: #e94560;
+}
+
+.op-btn:hover {
+  background: #ff6b81;
+}
+
+.op-btn:active {
+  background: #c93550;
+}
+
+/* Equals button */
+.equals-btn {
+  grid-column: span 4;
+  background: #2ecc71;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 14px 0;
+}
+
+.equals-btn:hover {
+  background: #3ddc84;
+}
+
+.equals-btn:active {
+  background: #27ae60;
+}
